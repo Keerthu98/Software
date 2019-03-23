@@ -2,7 +2,7 @@
 <resources>
 	<color name="colorPrimary">#1b1616</color>
 	<color name="colorPrimaryDark">#1d1b1b</color>
-	<color name="colorAccent">#FF4081</color>
+	<color name="colorAccent">#ff404d</color>
 	<color name="signuptext">#ff6398</color>
 	<color name="red">#afe250</color>
 	<color name="white">#FFE1DEDE</color>

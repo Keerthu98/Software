@@ -10,7 +10,8 @@
 	                                                  android:id="@+id/upitrans"
 	                                                  android:hint="UPI_ID"
 	                                                  android:inputType="text"
-	                                                  app:met_textColorHint="@color/signuptext"
+	                                                  app:met_textColorHint="@color/colorAccent"
+	                                                  app:met_textColor="@color/colorAccent"
 	                                                  app:met_iconPadding="1px"
 	                                                  app:met_iconRight="@drawable/ic_upi"
 	                                                  app:layout_constraintLeft_toLeftOf="parent"
@@ -22,7 +23,8 @@
 	                                                  android:layout_height="wrap_content"
 	                                                  android:hint="Remarks"
 	                                                  android:inputType="text"
-	                                                  app:met_textColorHint="@color/signuptext"
+	                                                  app:met_textColorHint="@color/colorAccent"
+	                                                  app:met_textColor="@color/colorAccent"
 	                                                  app:met_iconPadding="1px"
 	                                                  app:met_iconRight="@drawable/ic_remarks"
 	                                                  app:layout_constraintLeft_toLeftOf="parent"
@@ -39,4 +41,12 @@
 			android:background="@drawable/bg_aqua"
 			app:layout_constraintHorizontal_bias="0.498" app:layout_constraintTop_toBottomOf="@+id/materialEditText"
 			android:layout_marginTop="36dp"/>
+	<Button
+			android:text="CANCEL TRANSACTION"
+			android:layout_width="350dp"
+			android:layout_height="wrap_content"
+			android:background="@drawable/bg_asset"
+			android:id="@+id/cancel_upi" app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent" android:layout_marginTop="8dp"
+			app:layout_constraintTop_toBottomOf="@+id/upitransonclick"/>
 </android.support.constraint.ConstraintLayout>

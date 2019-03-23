@@ -61,7 +61,7 @@
 			>
 
 				<ImageView
-						android:src="@drawable/phone_asset"
+						android:src="@drawable/phone_asset1"
 						android:layout_width="198dp"
 						android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent"
 						app:layout_constraintBottom_toBottomOf="parent"
@@ -88,7 +88,7 @@
 			>
 
 				<ImageView
-						android:src="@drawable/atm_asset"
+						android:src="@drawable/atm_asset1"
 						android:layout_width="198dp"
 						android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent"
 						app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent"
@@ -114,7 +114,7 @@
 			>
 
 				<ImageView
-						android:src="@drawable/mail_asset"
+						android:src="@drawable/mail_asset1"
 						android:layout_width="198dp"
 						android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent"
 						app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent"

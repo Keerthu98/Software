@@ -40,20 +40,27 @@ public class signup extends AppCompatActivity {
 
     }
 
-    public void signup(View view){
-        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+    public void signup(View view) {
+
         String usr = username_sp.getText().toString();
         String name = name1.getText().toString();
-        if(usr.matches(emailPattern)&& usr.length()>0 && name.length()>0){
-            if(password_sp.getText().toString().matches(password_sp_cf.getText().toString())) {
+        if (emailvalidate(usr,name)) {
+            if (password_sp.getText().toString().matches(password_sp_cf.getText().toString())) {
                 String pass = password_sp.getText().toString();
-                registerUser(usr,name,pass);
+                registerUser(usr, name, pass);
+            } else {
+                Toast.makeText(signup.this, "Password Mismatch", Toast.LENGTH_LONG).show();
             }
-            else {Toast.makeText(signup.this,"Password Mismatch",Toast.LENGTH_LONG).show();}
         }
         else
             Toast.makeText(getApplicationContext(),"Invalid mail/User",Toast.LENGTH_LONG).show();
     }
+
+     public static boolean emailvalidate(String usr, String name){
+        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+(\\.[a-z]+)+";
+        return (usr.matches(emailPattern)&& usr.length()>0 && name.length()>0);
+    }
+
 
     private void registerUser(String usr, String name, String pass) {
 

@@ -25,12 +25,11 @@ import java.security.*;
 import java.security.cert.CertificateException;
 
 public class welcome extends AppCompatActivity {
-    Button welocme;
+    //Button welcome_b;
     private static final String KEY_NAME = "yourKey";
-    private Cipher cipher;
+    private static Cipher cipher;
     private KeyStore keyStore;
     private KeyGenerator keyGenerator;
-    private TextView textView;
     private FingerprintManager.CryptoObject cryptoObject;
     private FingerprintManager fingerprintManager;
     private KeyguardManager keyguardManager;
@@ -39,6 +38,15 @@ public class welcome extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
+        /*welcome_b = (Button)findViewById(R.id.welcome);
+        welcome_b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent bypass = new Intent(v.getContext(),signin.class);
+                startActivity(bypass);
+            }
+        });*/
+
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             //Get an instance of KeyguardManager and FingerprintManager//
@@ -50,23 +58,23 @@ public class welcome extends AppCompatActivity {
 
 
             if (!fingerprintManager.isHardwareDetected()) {
-                textView.setText("Your device doesn't support fingerprint authentication");
+                //textView.setText("Your device doesn't support fingerprint authentication");
             }
 
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.USE_FINGERPRINT) != PackageManager.PERMISSION_GRANTED) {
-                textView.setText("Please enable the fingerprint permission");
+                //textView.setText("Please enable the fingerprint permission");
             }
 
 
             if (!fingerprintManager.hasEnrolledFingerprints()) {
 
-                textView.setText("No fingerprint configured. Please register at least one fingerprint in your device's Settings");
+                //textView.setText("No fingerprint configured. Please register at least one fingerprint in your device's Settings");
             }
 
 
             if (!keyguardManager.isKeyguardSecure()) {
 
-                textView.setText("Please enable lockscreen security in your device's Settings");
+               // textView.setText("Please enable lockscreen security in your device's Settings");
             } else {
                 try {
                     generateKey();
@@ -108,19 +116,19 @@ public class welcome extends AppCompatActivity {
 
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.USE_FINGERPRINT) != PackageManager.PERMISSION_GRANTED) {
 
-                textView.setText("Please enable the fingerprint permission");
+                //textView.setText("Please enable the fingerprint permission");
             }
 
 
             if (!fingerprintManager.hasEnrolledFingerprints()) {
 
-                textView.setText("No fingerprint configured. Please register at least one fingerprint in your device's Settings");
+                //textView.setText("No fingerprint configured. Please register at least one fingerprint in your device's Settings");
             }
 
 
             if (!keyguardManager.isKeyguardSecure()) {
 
-                textView.setText("Please enable lockscreen security in your device's Settings");
+                //textView.setText("Please enable lockscreen security in your device's Settings");
             } else {
                 try {
                     generateKey();

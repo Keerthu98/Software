@@ -57,12 +57,16 @@ public class signin extends AppCompatActivity {
             Toast.makeText(this, "INCORRECT PASSWORD/USERNAME", Toast.LENGTH_LONG).show();
         }*/
         //temp login
-        if(uname.equals("vicky")&&passch.equals("admin")){
-            Intent admin_int = new Intent(getApplicationContext(), recycler.class);
-            startActivity(admin_int);
+        if(temporary(uname,passch)){
+                Intent admin_int = new Intent(getApplicationContext(), recycler.class);
+                startActivity(admin_int);
         }
+
     }
 
+    public static boolean temporary(String uname, String passch){
+        return (uname.equals("vicky")&&passch.equals("admin"));
+    }
     private void loginUser(String uname, String passch) {
 
         compositeDisposable.add(iMyservices.loginUser(uname,passch)

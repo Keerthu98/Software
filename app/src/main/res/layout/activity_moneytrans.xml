@@ -19,7 +19,7 @@ android:background="@color/black">
 			android:layout_width="250dp"
 			android:layout_height="wrap_content"
 			android:inputType="textPersonName"
-			android:hint="RECIPIENT NAME"
+			android:hint="RECIPIENT UPI_ID"
 			android:textColor="@color/red"
 			android:textSize="9pt"
 			android:textAlignment="center"
@@ -34,7 +34,7 @@ android:background="@color/black">
 			android:layout_width="270dp"
 			android:layout_height="wrap_content"
 			android:inputType="number"
-			android:hint="ENTER AMOUNT"
+			android:hint="Enter Amount"
 			android:textColor="@color/red"
 			android:textSize="9pt"
 			android:textAlignment="center"
@@ -42,18 +42,18 @@ android:background="@color/black">
 			android:ems="10"
 			app:layout_constraintLeft_toLeftOf="parent"
 			app:layout_constraintRight_toRightOf="parent" android:id="@+id/amount" android:layout_marginBottom="24dp"
-			app:layout_constraintBottom_toTopOf="@+id/remark"/>
+			app:layout_constraintBottom_toTopOf="@+id/regmobile"/>
 	<EditText
 			android:layout_width="270dp"
 			android:layout_height="wrap_content"
-			android:inputType="textPersonName"
-			android:hint="REMARKS"
+			android:inputType="number"
+			android:hint="Registered Number"
 			android:textColor="@color/red"
 			android:textSize="9pt"
 			android:textAlignment="center"
 			android:background="@drawable/bg_input_gold"
 			android:ems="10"
-			android:id="@+id/remark" app:layout_constraintLeft_toLeftOf="parent"
+			android:id="@+id/regmobile" app:layout_constraintLeft_toLeftOf="parent"
 			app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
 			app:layout_constraintRight_toRightOf="parent"/>
 	<Button

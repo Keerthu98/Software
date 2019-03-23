@@ -16,16 +16,15 @@ public class recycler extends AppCompatActivity {
     private ArrayList<models> imageModelArrayList;
     private modeladapter adapter;
 
-    private int[] myImageList = new int[]{R.drawable.parrot, R.drawable.anchor,R.drawable.bird, R.drawable.girl};
+    private int[] myImageList = new int[]{R.drawable.money_trans, R.drawable.maintain_trans,R.drawable.utility_trans, R.drawable.girl};
     private String[] myImageNameList = new String[]{"Money Transfer","Wallet Maintenance" ,"Payment Utilities","Ticket Booking"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler);
-
+        Toast.makeText(this, "Swipe", Toast.LENGTH_SHORT).show();
         recyclerView = (RecyclerView) findViewById(R.id.recycler);
-
         imageModelArrayList = initialize();
         adapter = new modeladapter(this, imageModelArrayList);
         recyclerView.setAdapter(adapter);
@@ -70,7 +69,6 @@ public class recycler extends AppCompatActivity {
             fruitModel.setImage_drawable(myImageList[i]);
             list.add(fruitModel);
         }
-
         return list;
     }
 }

@@ -17,4 +17,18 @@ public interface IMyservices {
     @FormUrlEncoded
     io.reactivex.Observable <String> loginUser(@Field("email") String email,
                                          @Field("password") String password);
+
+    @POST("storedata")
+    @FormUrlEncoded
+    io.reactivex.Observable <String> storedata(@Field("mobile_number") String mobile_number,
+                                               @Field("upi_id") String upi_id,
+                                               @Field("balance") String balance,
+                                               @Field("pin") String pin,
+                                               @Field("email") String email);
+
+
+    @POST("retrieve_upi")
+    @FormUrlEncoded
+    io.reactivex.Observable <String> retrieve_upi(@Field("upi_id") String upi_id);
+
 }

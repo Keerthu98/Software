@@ -5,15 +5,18 @@
 		xmlns:app="http://schemas.android.com/apk/res-auto"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
+
 		tools:context="com.example.vicky.e_coin.maintain"
 android:background="@color/colorPrimaryDark">
 
 	<ImageView
-			android:layout_width="378dp"
+			android:layout_width="370dp"
 			android:layout_height="288dp" app:srcCompat="@drawable/card"
+			android:layout_marginLeft="3pt"
+			android:layout_marginRight="3pt"
 			app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
-			android:id="@+id/imageView" app:layout_constraintHorizontal_bias="0.484"
-			app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="4dp"/>
+			android:id="@+id/imageView" app:layout_constraintHorizontal_bias="0.487"
+			app:layout_constraintTop_toTopOf="parent"/>
 	<EditText
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
@@ -64,11 +67,89 @@ android:background="@color/colorPrimaryDark">
 	<Button
 			android:text="Add card"
 			android:onClick="validatecard"
-			android:layout_width="380dp"
-			android:background="@color/aqua"
+			android:layout_width="370dp"
+			android:background="@drawable/bg_aqua"
 			android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent"
 			app:layout_constraintBottom_toBottomOf="parent"
-			android:id="@+id/button" app:layout_constraintVertical_bias="0.477"
+			android:id="@+id/button" app:layout_constraintVertical_bias="0.453"
 			app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
-			app:layout_constraintHorizontal_bias="0.483"/>
+			app:layout_constraintHorizontal_bias="0.487"/>
+	<EditText
+			android:layout_width="55dp"
+			android:layout_height="wrap_content"
+			android:inputType="textPersonName"
+			android:hint="CVV"
+			android:maxLength="3"
+			android:background="@drawable/bg_edittext_focused_1"
+			android:ems="10"
+			android:id="@+id/cvv" app:layout_constraintStart_toEndOf="@+id/cardno"
+			android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+			app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="116dp"
+			app:layout_constraintHorizontal_bias="0.644"/>
+	<com.rengwuxian.materialedittext.MaterialEditText android:layout_width="370dp"
+	                                                  android:layout_height="wrap_content"
+	                                                  android:id="@+id/maintain_atm"
+	                                                  android:hint="ATM_PIN"
+	                                                  android:inputType="number"
+	                                                  app:met_textColorHint="@color/text"
+	                                                  app:met_textColor="@color/text"
+	                                                  app:met_iconPadding="1px"
+	                                                  app:met_iconRight="@drawable/ic_atm"
+	                                                  app:layout_constraintLeft_toLeftOf="parent"
+	                                                  app:layout_constraintRight_toRightOf="parent"
+	                                                  app:layout_constraintHorizontal_bias="0.487"
+	                                                  android:layout_marginTop="28dp"
+	                                                  app:layout_constraintTop_toBottomOf="@+id/button"/>
+	<com.rengwuxian.materialedittext.MaterialEditText android:layout_width="370dp"
+	                                                  android:layout_height="wrap_content"
+
+	                                                  android:id="@+id/maintain_mail"
+	                                                  android:hint="MAIL_ID"
+	                                                  android:inputType="textEmailAddress"
+	                                                  app:met_textColorHint="@color/signuptext"
+	                                                  app:met_textColor="@color/signuptext"
+	                                                  app:met_iconPadding="1px"
+	                                                  app:met_iconRight="@drawable/ic_mail"
+	                                                  app:layout_constraintLeft_toLeftOf="parent"
+	                                                  app:layout_constraintRight_toRightOf="parent"
+	                                                  app:layout_constraintHorizontal_bias="0.491"
+	                                                  android:layout_marginTop="12dp"
+	                                                  app:layout_constraintTop_toBottomOf="@+id/maintain_atm"/>
+	<com.rengwuxian.materialedittext.MaterialEditText android:layout_width="370dp"
+	                                                  android:layout_height="wrap_content"
+	                                                  android:id="@+id/maintain_phone"
+	                                                  android:hint="PHONE_NUMBER"
+	                                                  android:inputType="number"
+	                                                  app:met_textColorHint="@color/logintext"
+	                                                  app:met_textColor="@color/logintext"
+	                                                  app:met_iconPadding="1px"
+	                                                  app:met_iconRight="@drawable/ic_phone"
+	                                                  app:layout_constraintLeft_toLeftOf="parent"
+	                                                  app:layout_constraintRight_toRightOf="parent"
+	                                                  app:layout_constraintHorizontal_bias="0.491"
+	                                                  android:layout_marginTop="12dp"
+	                                                  app:layout_constraintTop_toBottomOf="@+id/maintain_mail"/>
+	<com.rengwuxian.materialedittext.MaterialEditText android:layout_width="370dp"
+	                                                  android:layout_height="wrap_content"
+
+	                                                  android:id="@+id/maintain_upi"
+	                                                  android:hint="UPI_ID"
+	                                                  android:inputType="text"
+	                                                  app:met_textColorHint="@color/colorAccent"
+	                                                  app:met_textColor="@color/colorAccent"
+	                                                  app:met_iconPadding="1px"
+	                                                  app:met_iconRight="@drawable/ic_upi"
+	                                                  app:layout_constraintLeft_toLeftOf="parent"
+	                                                  app:layout_constraintRight_toRightOf="parent"
+	                                                  app:layout_constraintHorizontal_bias="0.491"
+	                                                  android:layout_marginTop="12dp"
+	                                                  app:layout_constraintTop_toBottomOf="@+id/maintain_phone"/>
+	<Button
+			android:text="Add Details"
+			android:onClick="validate_details"
+			android:layout_width="370dp"
+			android:background="@drawable/bg_aqua"
+			android:layout_height="wrap_content"
+			android:id="@+id/button2" android:layout_marginBottom="16dp" app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintRight_toRightOf="parent"/>
 </android.support.constraint.ConstraintLayout>
